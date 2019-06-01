@@ -1,4 +1,5 @@
 #coding:utf-8
+# Coding by Hackylu'x Fondateur of InformaTutos 
 import sys, time, os
 def login_hack(phrase):
     time.sleep(2)
@@ -45,47 +46,54 @@ except :
     print(R+"[!!]-Vous n'etes pas connecté à internet "+B)
     time.sleep(3)
     sys.exit()
-if conxion :
-    print(V+"[']-Connecté !"+B)
-    warning = R+"En utilisant ce programme vous acceptez à respecter les droits autruis : [utilisateurs]"+B
-    login_hack(warning)
-    print(J+"Acceptez vous cette recommendation ? ")
-    agree = input("Oui / Non ------> ")
-    if agree in ["oui", "Oui", "OUI"] :
-        pass
-    elif agree in ["Non", "non", "NON"] :
-        print(V+"Programme fermé ! ")
-        sys.exit()
-    else :
-        print(R+"Réponse invalide ! Relancer le programme !")
-        sys.exit()
+try :
+    if conxion :
+        try :
+            print(V+"[']-Connecté !"+B)
+            warning = R+"En utilisant ce programme vous acceptez à respecter les droits autruis : [utilisateurs]"+B
+            login_hack(warning)
+            print(J+"Acceptez vous cette recommendation ? ")
+            agree = input("Oui / Non ------> ")
+            if agree in ["oui", "Oui", "OUI"] :
+                pass
+            elif agree in ["Non", "non", "NON"] :
+                print(V+"Programme fermé ! ")
+                sys.exit()
+            else :
+                print(R+"Réponse invalide ! Relancer le programme !")
+                sys.exit()
+        except :
+            sys.exit()
+except :
+    sys.exit()
 def banier() :
     os.system("clear")
     print(C+"""
-        ==================================================
-            __                _                 _    
-           / _| __ _  ___ ___| |__   ___   ___ | | __
-          | |_ / _` |/ __/ _ \ '_ \ / _ \ / _ \| |/ /
-          |  _| (_| | (_|  __/ |_) | (_) | (_) |   < 
-          |_|  \__,_|\___\___|_.__/ \___/ \___/|_|\_"""+R+"""HACKING"""+C+"""
-        ===================================================                                                     
-    """+V+"""           ---Le Programme est à but lucratif---"""+B+
+===============================================
+    __                _                 _    
+   / _| __ _  ___ ___| |__   ___   ___ | | __
+  | |_ / _` |/ __/ _ \ '_ \ / _ \ / _ \| |/ /
+  |  _| (_| | (_|  __/ |_) | (_) | (_) |   < 
+  |_|  \__,_|\___\___|_.__/ \___/ \___/|_"""+R+"""HACKING"""+C+"""
+================================================                                                     
+    """+V+"""        ---Le Programme est à but lucratif---"""+B+
     """     
         -------------------    
-        Coding by Hackylu'x """+R+
+        Coding by Hackylu'x \n"""+R+
     """
-                                  FONDATEUR DE INFORMATUTOS
-                                  -------------------------
+                        FONDATEUR DE INFORMATUTOS
+                        -------------------------
     """+B)
 def help_mp() :
     os.system("clear")
     print(J+"""
-        -----------------------------------
-        [1] ===>>> Usage par défaut-
-        [2] ===>>> Usage Manuelle---
-        [3] ===>>> Usage Généré-----
-        [4] ===>>> Quitter----------
-        -----------------------------------
+        #----------COMMANDES USUELLES---------#
+        ---------------------------------------
+        #    [1] => Mode Par Défaut           #
+        #    [2] => Mode Manuelle             #
+        #    [3] => Mode Générer              #
+        #    [4] => Quitter                   #
+        #-------------------------------------#
     """+B)
 def attaque (passwd_victime, id_victime):
     navigateur = mechanicalsoup.StatefulBrowser()
@@ -291,4 +299,5 @@ def main_mp() :
         print(R+"Commande"+B+ " {}".format(hlp)+R+" Introuvable"+B)
         time.sleep(2)
         main_mp()
-main_mp()
+#main_mp()
+banier()
