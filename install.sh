@@ -28,29 +28,31 @@ echo " "
 arch=$(uname -m)
 if [ $arch = "x86_64" ]; then
     printf "$B Mise à jour et mise à niveau \n$W" 
-    sudo apt-get update && apt-get upgrade > install.log
+    sudo apt-get update > install.log
+    apt-get upgrade >> install.log
     printf "$B Installation des Modules ! \n $W"
     pip3 install requests >> install.log
-    pip3 install mechanicalsoup
+    pip3 install mechanicalsoup >> install.log
 elif [ $arch = "x86" ]; then
     printf "$B Mise à jour et mise à niveau \n$W" 
-    sudo apt-get update && apt-get upgrade > install.log
+    sudo apt-get update > install.log
+    sudo apt-get upgrade >> install.log
     printf "$B Installation des Modules ! \n $W"
     pip3 install requests >> install.log
-    pip3 install mechanicalsoup
+    pip3 install mechanicalsoup >> install.log
 else 
     printf "$B Mise à jour et mise à niveau \n$W"
     pkg update && pkg upgrade > install.log
     printf "$B Installation des dépendances  \n$W"
-    pkg install python >> install.log
-    pkg install libxml2 >> install.log
-    pkg install libxml2-dev >> install.log
-    pkg install libxml2-utils >> install.log
-    pkg install python-dev >> install.log
-    pkg install libxslt-dev >> install.log
-    pkg install clang >> install.log
-    pip install mechanicalsoup >> install.log
-    pip install requests >> install.log
+    pkg install python -y >> install.log
+    pkg install libxml2 -y >> install.log
+    pkg install libxml2-dev -y >> install.log
+    pkg install libxml2-utils -y >> install.log
+    pkg install python-dev -y >> install.log
+    pkg install libxslt-dev -y >> install.log
+    pkg install clang -y >> install.log
+    pip install mechanicalsoup -y >> install.log
+    pip install requests -y >> install.log
 fi
 echo "Dépendances installées avec succès ! "
 sleep 2

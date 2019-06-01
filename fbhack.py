@@ -34,7 +34,7 @@ try :
     import requests, mechanicalsoup
 except :
     print("Module manquant ")
-    print("Installer les modules avec la commande 'pip3 install -r required.txt'")
+    print("Installer les modules avec la commande 'pip install mechanicalsoup'")
     sys.exit()
 
 os.system("clear")
@@ -51,17 +51,8 @@ try :
         try :
             print(V+"[']-Connecté !"+B)
             warning = R+"En utilisant ce programme vous acceptez à respecter les droits autruis : [utilisateurs]"+B
+            time.sleep(1.2)
             login_hack(warning)
-            print(J+"Acceptez vous cette recommendation ? ")
-            agree = input("Oui / Non ------> ")
-            if agree in ["oui", "Oui", "OUI"] :
-                pass
-            elif agree in ["Non", "non", "NON"] :
-                print(V+"Programme fermé ! ")
-                sys.exit()
-            else :
-                print(R+"Réponse invalide ! Relancer le programme !")
-                sys.exit()
         except :
             sys.exit()
 except :
