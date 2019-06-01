@@ -28,8 +28,8 @@ echo " "
 arch=$(uname -m)
 if [ $arch = "x86_64" ]; then
     printf "$B Mise à jour et mise à niveau \n$W" 
-    sudo apt-get update > install.log
-    sudo apt-get upgrade >> install.log
+    sudo apt-get update -y> install.log
+    sudo apt-get upgrade -y>> install.log
     printf "$B Installation des Modules ! \n $W"
     pip3 install requests >> install.log
     pip3 install mechanicalsoup >> install.log
