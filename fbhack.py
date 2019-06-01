@@ -34,7 +34,7 @@ try :
     import requests, mechanicalsoup
 except :
     print("Module manquant ")
-    print("Installer les modules avec la commande 'pip install mechanicalsoup'")
+    print("Installer les modules avec la commande 'pip3 install mechanicalsoup'")
     sys.exit()
 
 os.system("clear")
@@ -290,5 +290,4 @@ def main_mp() :
         print(R+"Commande"+B+ " {}".format(hlp)+R+" Introuvable"+B)
         time.sleep(2)
         main_mp()
-#main_mp()
-banier()
+main_mp()
